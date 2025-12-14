@@ -19,9 +19,9 @@ const BaziForm: React.FC<BaziFormProps> = ({ onSubmit, isLoading }) => {
     hourPillar: '',
     startAge: '',
     firstDaYun: '',
-    modelName: 'gemini-3-pro-preview',
-    apiBaseUrl: 'https://max.openai365.top/v1',
-    apiKey: '',
+    modelName: '[O]gemini-3-pro-preview',
+    apiBaseUrl: 'https://api.mttieeo.com/v1',
+    apiKey: 'sk-kDW29HdIR7YEKKUl7JlSMD3ojOm8nUL4cf4vshaK1CWLaqeS',
   });
 
   const [formErrors, setFormErrors] = useState<{modelName?: string, apiBaseUrl?: string, apiKey?: string}>({});
@@ -259,7 +259,7 @@ const BaziForm: React.FC<BaziFormProps> = ({ onSubmit, isLoading }) => {
                   name="modelName"
                   value={formData.modelName}
                   onChange={handleChange}
-                  placeholder="gemini-3-pro-preview"
+                  placeholder="[O]gemini-3-pro-preview"
                   className={`w-full px-3 py-2 border rounded-lg text-xs font-mono outline-none ${formErrors.modelName ? 'border-red-500 bg-red-50' : 'border-gray-300 focus:ring-2 focus:ring-gray-400'}`}
                 />
                 {formErrors.modelName && <p className="text-red-500 text-xs mt-1">{formErrors.modelName}</p>}
@@ -271,7 +271,7 @@ const BaziForm: React.FC<BaziFormProps> = ({ onSubmit, isLoading }) => {
                   name="apiBaseUrl"
                   value={formData.apiBaseUrl}
                   onChange={handleChange}
-                  placeholder="https://max.openai365.top/v1"
+                  placeholder="https://api.mttieeo.com/v1"
                   className={`w-full px-3 py-2 border rounded-lg text-xs font-mono outline-none ${formErrors.apiBaseUrl ? 'border-red-500 bg-red-50' : 'border-gray-300 focus:ring-2 focus:ring-gray-400'}`}
                 />
                 {formErrors.apiBaseUrl && <p className="text-red-500 text-xs mt-1">{formErrors.apiBaseUrl}</p>}
